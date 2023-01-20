@@ -41,7 +41,7 @@ jobs:
 
       - name: Print Version
         run: |
-          echo ${{steps.version_step.outputs.version_tag}}
+          echo ${{steps.version_step.outputs.version}}
 
       - name: Check out the repo
         uses: actions/checkout@v3
