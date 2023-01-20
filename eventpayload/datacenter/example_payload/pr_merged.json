@@ -1,0 +1,190 @@
+{
+    "eventKey": "pr:merged",
+    "date": "2023-01-16T21:17:42+0000",
+    "actor": {
+        "name": "daniel",
+        "emailAddress": "dschroeter@demo.com",
+        "active": true,
+        "displayName": "Daniel Schröter",
+        "id": 2,
+        "slug": "daniel",
+        "type": "NORMAL",
+        "links": {
+            "self": [
+                {
+                    "href": "http://localhost:7990/users/daniel"
+                }
+            ]
+        }
+    },
+    "pullRequest": {
+        "id": 2,
+        "version": 3,
+        "title": "Test",
+        "description": "* add test file\n* add test file1\n* add test file2",
+        "state": "MERGED",
+        "open": false,
+        "closed": true,
+        "createdDate": 1673903526027,
+        "updatedDate": 1673903862238,
+        "closedDate": 1673903862238,
+        "fromRef": {
+            "id": "refs/heads/test",
+            "displayId": "test",
+            "latestCommit": "3658c533d285aa98876e3e744f2e01822f685a3e",
+            "type": "BRANCH",
+            "repository": {
+                "slug": "demo-repository",
+                "id": 1,
+                "name": "demo-repository",
+                "hierarchyId": "ad3e1ff625649327066e",
+                "scmId": "git",
+                "state": "AVAILABLE",
+                "statusMessage": "Available",
+                "forkable": true,
+                "project": {
+                    "key": "DP",
+                    "id": 1,
+                    "name": "DEMO PROJECT",
+                    "public": false,
+                    "type": "NORMAL",
+                    "links": {
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/projects/DP"
+                            }
+                        ]
+                    }
+                },
+                "public": true,
+                "archived": false,
+                "links": {
+                    "clone": [
+                        {
+                            "href": "ssh://git@localhost:7999/dp/demo-repository.git",
+                            "name": "ssh"
+                        },
+                        {
+                            "href": "http://localhost:7990/scm/dp/demo-repository.git",
+                            "name": "http"
+                        }
+                    ],
+                    "self": [
+                        {
+                            "href": "http://localhost:7990/projects/DP/repos/demo-repository/browse"
+                        }
+                    ]
+                }
+            }
+        },
+        "toRef": {
+            "id": "refs/heads/production",
+            "displayId": "production",
+            "latestCommit": "baf8e8648f317698b2746f9de67c5b0cba1dc421",
+            "type": "BRANCH",
+            "repository": {
+                "slug": "demo-repository",
+                "id": 1,
+                "name": "demo-repository",
+                "hierarchyId": "ad3e1ff625649327066e",
+                "scmId": "git",
+                "state": "AVAILABLE",
+                "statusMessage": "Available",
+                "forkable": true,
+                "project": {
+                    "key": "DP",
+                    "id": 1,
+                    "name": "DEMO PROJECT",
+                    "public": false,
+                    "type": "NORMAL",
+                    "links": {
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/projects/DP"
+                            }
+                        ]
+                    }
+                },
+                "public": true,
+                "archived": false,
+                "links": {
+                    "clone": [
+                        {
+                            "href": "ssh://git@localhost:7999/dp/demo-repository.git",
+                            "name": "ssh"
+                        },
+                        {
+                            "href": "http://localhost:7990/scm/dp/demo-repository.git",
+                            "name": "http"
+                        }
+                    ],
+                    "self": [
+                        {
+                            "href": "http://localhost:7990/projects/DP/repos/demo-repository/browse"
+                        }
+                    ]
+                }
+            }
+        },
+        "locked": false,
+        "author": {
+            "user": {
+                "name": "daniel",
+                "emailAddress": "dschroeter@demo.com",
+                "active": true,
+                "displayName": "Daniel Schröter",
+                "id": 2,
+                "slug": "daniel",
+                "type": "NORMAL",
+                "links": {
+                    "self": [
+                        {
+                            "href": "http://localhost:7990/users/daniel"
+                        }
+                    ]
+                }
+            },
+            "role": "AUTHOR",
+            "approved": false,
+            "status": "UNAPPROVED"
+        },
+        "reviewers": [
+            {
+                "user": {
+                    "name": "bkendal",
+                    "emailAddress": "bkendal@demo.com",
+                    "active": true,
+                    "displayName": "Braylen Kendal",
+                    "id": 4,
+                    "slug": "bkendal",
+                    "type": "NORMAL",
+                    "links": {
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/users/bkendal"
+                            }
+                        ]
+                    }
+                },
+                "lastReviewedCommit": "3658c533d285aa98876e3e744f2e01822f685a3e",
+                "role": "REVIEWER",
+                "approved": true,
+                "status": "APPROVED"
+            }
+        ],
+        "participants": [],
+        "properties": {
+            "mergeCommit": {
+                "displayId": "8e5f91f51dc",
+                "id": "8e5f91f51dca5fcafcc67ed2b63294095724ef79"
+            }
+        },
+        "links": {
+            "self": [
+                {
+                    "href": "http://localhost:7990/projects/DP/repos/demo-repository/pull-requests/2"
+                }
+            ]
+        }
+    }
+}
