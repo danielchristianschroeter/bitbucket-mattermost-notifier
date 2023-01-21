@@ -931,7 +931,7 @@ func main() {
 			HandleEvent(w, r, eventKey)
 		}
 	})
-	log.Print("Listening now on port ", GetConfigValue("LISTEN_PORT"))
+	log.Print("Listening now on port ", GetConfigValue("LISTEN_PORT")+"...")
 	srv.Addr = ":" + GetConfigValue("LISTEN_PORT")
 	if err := srv.ListenAndServe(); err != http.ErrServerClosed {
 		log.Printf("Error received on listening on port: %v", err)

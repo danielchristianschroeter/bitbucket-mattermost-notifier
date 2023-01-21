@@ -14,7 +14,6 @@ The application can be configured using either environment variables or a `confi
 `WARNING_COLOR`: The color code to be used for warning messages (default: f1c40f)
 `SUCCESS_COLOR`: The color code to be used for success messages (default: 2ecc71)
 
-When using `environment variables`, you need to add `BMN_` before each variable (e.g. BMN_LISTEN_PORT, BMN_MATTERMOST_WEBHOOKURL, BMN_MATTERMOST_USERNAME, ...).
 The application will automatically use the environment variables if present, otherwise it will use the values from the config.env file.
 
 ### Bitbucket configuration
@@ -29,13 +28,18 @@ Create a new webhook within your repository you want to receive messages to Matt
 3. Run the application with `./bitbucket-to-mattermost-notifier`
 
 ### Docker Image
-1. Pull the latest version of the image from Docker Hub by running `docker pull docker.io/danielschroeter/bitbucket-mattermost-notifier:latest` or pull the image from Github with `docker pull ghcr.io/danielchristianschroeter/bitbucket-mattermost-notifier:latest`
-2. Run the container as follows: `docker run -p 1337:1337 -e BMN_MATTERMOST_WEBHOOKURL=<webhook_url> -e BMN_MATTERMOST_USERNAME=<username> -e BMN_MATTERMOST_CHANNEL=<channel> bitbucket-mattermost-notifier`
+1. Run the Docker container as follows: 
+`docker run -p 1337:1337 -e MATTERMOST_WEBHOOKURL=<webhook_url> -e MATTERMOST_USERNAME=<username> -e MATTERMOST_CHANNEL=<channel> docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
 
-Make sure to replace `<webhook_url>`, `<username>`, `<channel>` with your Mattermost webhook URL, username, and channel respectively. The environment variables should also include all other necessary configuration options as described above.
+Make sure to replace `<webhook_url>`, `<username>`, `<channel>` with your Mattermost webhook URL, username, and channel respectively. 
+The environment variables can also include all other necessary configuration options as described above.
+
+The image can be pulled from Ducker Hub or from Github:
+`docker pull docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
+`docker pull ghcr.io/danielchristianschroeter/bitbucket-mattermost-notifier:latest`
 
 ## Usage
-Once the application is running, configure the webhook URL in your Bitbucket repository settings to point to the URL of your server where the application is hosted. The application will listen for incoming webhooks and format the payload into a message to be sent to the configured Mattermost channel.
+Once the application is running, configure the webhook URL in your Bitbucket repository settings to point to the URL of your server where the Bitbucket to Mattermost Notifier application is hosted. The application will listen for incoming webhooks and format the payload into a message to be sent to the configured Mattermost channel.
 
 The application will also change the color of the message depending on the event type.
 
