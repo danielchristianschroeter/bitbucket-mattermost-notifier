@@ -37,7 +37,7 @@ jobs:
       - name: Extract Version
         id: version_step
         run: |
-          echo "version=${GITHUB_REF#$"refs/tags"}" >> $GITHUB_OUTPUT
+          echo "version=${GITHUB_REF#$"refs/tags/"}" >> $GITHUB_OUTPUT
 
       - name: Print Version
         run: |
@@ -75,4 +75,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            ${{steps.version_step.outputs.version}}
+            VERSION=${{steps.version_step.outputs.version}}

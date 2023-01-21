@@ -288,12 +288,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.Description,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -334,12 +334,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -380,12 +380,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -472,12 +472,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -542,12 +542,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State + " / " + payload.PreviousStatus,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -587,12 +587,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State + " / " + payload.PreviousStatus,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -627,12 +627,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State + " / " + payload.PreviousStatus,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -663,12 +663,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.Description,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -709,12 +709,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -750,12 +750,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -786,12 +786,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -827,12 +827,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},
@@ -873,12 +873,12 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 						Value: payload.PullRequest.State,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "From",
 						Value: payload.PullRequest.FromRef.Repository.Name + " (" + payload.PullRequest.FromRef.Repository.Project.Name + ") - " + payload.PullRequest.FromRef.DisplayID + " - " + payload.PullRequest.FromRef.LatestCommit,
 					},
 					{
-						Short: false,
+						Short: true,
 						Title: "To",
 						Value: payload.PullRequest.ToRef.Repository.Name + " (" + payload.PullRequest.ToRef.Repository.Project.Name + ") - " + payload.PullRequest.ToRef.DisplayID + " - " + payload.PullRequest.ToRef.LatestCommit,
 					},

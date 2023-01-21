@@ -1,6 +1,8 @@
 # Bitbucket to Mattermost Notifier
 This application serves as a proxy for event payloads (https://confluence.atlassian.com/bitbucketserver/event-payload-938025882.html) coming from Bitbucket, formats them, and sends them as useful messages to Mattermost.
 
+![Mattermost notifications example](Mattermost-notifications-example.png)
+
 ## Configuration
 The application can be configured using either environment variables or a `config.env` file. The following parameters can be configured:
 
@@ -21,6 +23,15 @@ Create a new webhook within your repository you want to receive messages to Matt
 
 ![Bitbucket configuration](Bitbucket-configuration.png)
 
+### Create incoming webhook in Mattermost
+In Mattermost, go to Product menu > Integrations > Incoming Webhook.
+If you don’t have the Integrations option, incoming webhooks may not be enabled on your Mattermost server or may be disabled for non-admins. 
+They can be enabled by a System Admin from System Console > Integrations > Integration Management. Once incoming webhooks are enabled, continue with the steps below.
+Select Add Incoming Webhook and add a name and description for the webhook. The description can be up to 500 characters.
+Select the channel to receive webhook payloads, then select Add to create the webhook.
+
+https://developers.mattermost.com/integrate/webhooks/incoming/
+
 ## Running the Application
 ### Go Executable
 1. Download the latest release of the application from the releases page
@@ -29,9 +40,9 @@ Create a new webhook within your repository you want to receive messages to Matt
 
 ### Docker Image
 1. Run the Docker container as follows: 
-`docker run -p 1337:1337 -e MATTERMOST_WEBHOOKURL=<webhook_url> -e MATTERMOST_USERNAME=<username> -e MATTERMOST_CHANNEL=<channel> docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
+`docker run --name bitbucket-mattermost-notifier --detach --publish 1337:1337 --env MATTERMOST_WEBHOOKURL=<webhook_url> --env MATTERMOST_CHANNEL=<channel> docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
 
-Make sure to replace `<webhook_url>`, `<username>`, `<channel>` with your Mattermost webhook URL, username, and channel respectively. 
+Make sure to replace `<webhook_url>` and `<channel>` with your Mattermost webhook URL and channel respectively. 
 The environment variables can also include all other necessary configuration options as described above.
 
 The image can be pulled from Ducker Hub or from Github:
