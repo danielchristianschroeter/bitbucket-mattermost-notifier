@@ -39,15 +39,15 @@ https://developers.mattermost.com/integrate/webhooks/incoming/
 3. Run the application with `./bitbucket-to-mattermost-notifier`
 
 ### Docker Image
-1. Run the Docker container as follows: 
-`docker run --name bitbucket-mattermost-notifier --detach --publish 1337:1337 --env MATTERMOST_WEBHOOKURL=<webhook_url> --env MATTERMOST_CHANNEL=<channel> docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
+1. Pull the latest image from Docker Hub or GitHub:
+`docker pull docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
+or
+`docker pull ghcr.io/danielchristianschroeter/bitbucket-mattermost-notifier:latest`
+2. Run the Docker container as follows: 
+`docker run --name bitbucket-mattermost-notifier --detach --publish 1337:1337 --rm --env MATTERMOST_WEBHOOKURL=<webhook_url> --env MATTERMOST_CHANNEL=<channel> docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
 
 Make sure to replace `<webhook_url>` and `<channel>` with your Mattermost webhook URL and channel respectively. 
 The environment variables can also include all other necessary configuration options as described above.
-
-The image can be pulled from Ducker Hub or from Github:
-`docker pull docker.io/danielschroeter/bitbucket-mattermost-notifier:latest`
-`docker pull ghcr.io/danielchristianschroeter/bitbucket-mattermost-notifier:latest`
 
 ## Usage
 Once the application is running, configure the webhook URL in your Bitbucket repository settings to point to the URL of your server where the Bitbucket to Mattermost Notifier application is hosted. The application will listen for incoming webhooks and format the payload into a message to be sent to the configured Mattermost channel.
