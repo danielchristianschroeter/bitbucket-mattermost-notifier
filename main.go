@@ -265,11 +265,16 @@ func HandleEvent(w http.ResponseWriter, r *http.Request, eventKey string) {
 		}
 		// Create a comma seperated list for all reviewers
 		var reviewersList string
-		for _, reviewer := range payload.PullRequest.Reviewers {
-			reviewersList += "@" + reviewer.User.Name + ", "
+		if len(payload.PullRequest.Reviewers) == 0 {
+			reviewersList = ""
+		} else {
+			for _, reviewer := range payload.PullRequest.Reviewers {
+				reviewersList += "@" + reviewer.User.Name + ", "
+			}
+			// Remove the last comma and space from the reviewersList
+			reviewersList = reviewersList[:len(reviewersList)-2]
 		}
-		// Remove the last comma and space from the reviewersList
-		reviewersList = reviewersList[:len(reviewersList)-2]
+
 		attachments = []Attachment{
 			{
 				Fallback:  "Pull request opened by " + payload.Actor.DisplayName,
