@@ -931,7 +931,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == http.MethodPost {
 			eventKey := r.Header.Get("X-Event-Key")
-			log.Printf("Incomming payload received for header key X-Event-Key with value %v", eventKey)
+			log.Printf("Incoming payload received for header key X-Event-Key with value %v", eventKey)
 			// Handle different event keys from Bitbucket
 			HandleEvent(w, r, eventKey)
 		}
